@@ -86,3 +86,11 @@ jobs:
           publish_branch: gh-pages
           publish_dir: allure-report
           keep_files: true
+
+      - name: Print report URL
+        if: always()
+        run: |
+          URL="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ matrix.env }}"
+          echo "Allure Report (${{ matrix.env }}): $URL"
+          echo "## Allure Report — \`${{ matrix.env }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "[View Report]($URL)" >> $GITHUB_STEP_SUMMARY
