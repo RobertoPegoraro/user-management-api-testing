@@ -11,8 +11,6 @@ jobs:
   e2e-tests:
     name: E2E - ${{ matrix.env }}
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     strategy:
       fail-fast: false
@@ -78,19 +76,48 @@ jobs:
             --clean \
             -o allure-report/${{ matrix.env }}
 
+      - name: Upload Allure report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: allure-report-${{ matrix.env }}
+          path: allure-report/${{ matrix.env }}
+          retention-days: 7
+
+  deploy-pages:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: e2e-tests
+    if: always()
+    permissions:
+      contents: write
+
+    steps:
+      - name: Download dev report
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-report-dev
+          path: allure-report/dev
+
+      - name: Download prod report
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-report-prod
+          path: allure-report/prod
+
       - name: Publish to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
-        if: always()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-report
           keep_files: true
 
-      - name: Print report URL
-        if: always()
+      - name: Print report URLs
         run: |
-          URL="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ matrix.env }}"
-          echo "Allure Report (${{ matrix.env }}): $URL"
-          echo "## Allure Report — \`${{ matrix.env }}\`" >> $GITHUB_STEP_SUMMARY
-          echo "[View Report]($URL)" >> $GITHUB_STEP_SUMMARY
+          BASE="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+          echo "## Allure Reports" >> $GITHUB_STEP_SUMMARY
+          echo "- [dev]($BASE/dev)" >> $GITHUB_STEP_SUMMARY
+          echo "- [prod]($BASE/prod)" >> $GITHUB_STEP_SUMMARY
+          echo "dev:  $BASE/dev"
+          echo "prod: $BASE/prod"
