@@ -1,0 +1,21 @@
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Daron Strosin",
+  "email" : "test-baaec9e62534@example.com",
+  "age" : 128
+}
+◀ HTTP 201
+  Response: {
+  "age" : 128,
+  "email" : "test-baaec9e62534@example.com",
+  "name" : "Daron Strosin"
+}
+▶ PUT http://localhost:3000/dev/users/test-baaec9e62534@example.com
+  Request: {
+  "name" : "Mr. Evita Reynolds",
+  "email" : "test-85841ae691b5@example.com"
+}
+◀ HTTP 400
+  Response: {
+  "error" : "age is required"
+}

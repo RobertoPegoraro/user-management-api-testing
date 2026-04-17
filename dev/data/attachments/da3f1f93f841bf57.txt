@@ -1,0 +1,22 @@
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Wes Mann",
+  "email" : "test-9e89730389c0@example.com",
+  "age" : 66
+}
+◀ HTTP 201
+  Response: {
+  "age" : 66,
+  "email" : "test-9e89730389c0@example.com",
+  "name" : "Wes Mann"
+}
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Lowell Luettgen",
+  "email" : "test-6e178b62a168@example.com",
+  "age" : 151
+}
+◀ HTTP 400
+  Response: {
+  "error" : "Age must be between 1 and 150"
+}

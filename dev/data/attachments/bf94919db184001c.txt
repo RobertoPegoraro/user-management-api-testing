@@ -1,0 +1,27 @@
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Athena Corkery",
+  "email" : "test-46a79394d82e@example.com",
+  "age" : 0
+}
+◀ HTTP 400
+  Response: {
+  "error" : "Age must be between 1 and 150"
+}
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Stan Heathcote",
+  "email" : "test-e8f0792ba07e@example.com",
+  "age" : 13
+}
+◀ HTTP 201
+  Response: {
+  "age" : 13,
+  "email" : "test-e8f0792ba07e@example.com",
+  "name" : "Stan Heathcote"
+}
+▶ DELETE http://localhost:3000/dev/users/nonexistent@example.com
+◀ HTTP 404
+  Response: {
+  "error" : "User not found"
+}

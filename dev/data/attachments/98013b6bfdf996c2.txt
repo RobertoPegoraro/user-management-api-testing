@@ -1,0 +1,34 @@
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Cletus Predovic",
+  "email" : "test-c8285ae013c9@example.com",
+  "age" : 49
+}
+◀ HTTP 201
+  Response: {
+  "age" : 49,
+  "email" : "test-c8285ae013c9@example.com",
+  "name" : "Cletus Predovic"
+}
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Lazaro Harvey",
+  "email" : "test-1f234819f8aa@example.com",
+  "age" : 10
+}
+◀ HTTP 201
+  Response: {
+  "age" : 10,
+  "email" : "test-1f234819f8aa@example.com",
+  "name" : "Lazaro Harvey"
+}
+▶ PUT http://localhost:3000/dev/users/test-1f234819f8aa@example.com
+  Request: {
+  "name" : "Johnie Goldner DDS",
+  "email" : "test-c8285ae013c9@example.com",
+  "age" : 74
+}
+◀ HTTP 409
+  Response: {
+  "error" : "Email already exists"
+}

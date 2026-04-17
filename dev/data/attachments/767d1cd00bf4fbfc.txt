@@ -1,0 +1,19 @@
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Ms. Dominick Veum",
+  "email" : "test-a09188c6dc35@example.com",
+  "age" : 132
+}
+◀ HTTP 201
+  Response: {
+  "age" : 132,
+  "email" : "test-a09188c6dc35@example.com",
+  "name" : "Ms. Dominick Veum"
+}
+▶ GET http://localhost:3000/dev/users/test-9ba3a053f978@example.com
+◀ HTTP 200
+  Response: {
+  "age" : 88,
+  "email" : "test-9ba3a053f978@example.com",
+  "name" : "Reuben Rice"
+}
