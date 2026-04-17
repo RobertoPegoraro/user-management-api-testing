@@ -1,0 +1,34 @@
+▶ DELETE http://localhost:3000/dev/users/test-81d981145c35@example.com
+◀ HTTP 204
+  Response: 
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Ferdinand Purdy",
+  "email" : "ABC",
+  "age" : 103
+}
+◀ HTTP 201
+  Response: {
+  "age" : 103,
+  "email" : "ABC",
+  "name" : "Ferdinand Purdy"
+}
+▶ PUT http://localhost:3000/dev/users/test-f315f920e421@example.com
+  Request: {
+  "name" : "Andy Zboncak III",
+  "email" : "test-664fff64f9ed@example.com",
+  "age" : 87
+}
+◀ HTTP 200
+  Response: {
+  "age" : 87,
+  "email" : "test-664fff64f9ed@example.com",
+  "name" : "Andy Zboncak III"
+}
+▶ GET http://localhost:3000/dev/users/test-f315f920e421@example.com
+◀ HTTP 200
+  Response: {
+  "age" : 86,
+  "email" : "test-f315f920e421@example.com",
+  "name" : "Rod Mueller"
+}

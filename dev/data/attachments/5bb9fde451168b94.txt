@@ -1,0 +1,80 @@
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Miss Lesha Gottlieb",
+  "email" : "test-79dceb7fa8cc@example.com",
+  "age" : 75
+}
+◀ HTTP 201
+  Response: {
+  "age" : 75,
+  "email" : "test-79dceb7fa8cc@example.com",
+  "name" : "Miss Lesha Gottlieb"
+}
+▶ GET http://localhost:3000/dev/users
+◀ HTTP 200
+  Response: [ {
+  "age" : 76,
+  "email" : "test-106472759129@example.com",
+  "name" : "Maria Bayer DVM"
+}, {
+  "age" : 143,
+  "email" : "test-8cd8e7fb2b1f@example.com",
+  "name" : "Brooks Sauer"
+}, {
+  "age" : 78,
+  "email" : "test-76b5ce7ef2dd@example.com",
+  "name" : "Jake Strosin"
+}, {
+  "age" : 150,
+  "email" : "test-65a6a86b9c7f@example.com",
+  "name" : "Mrs. Norberto Goodwin"
+}, {
+  "age" : 1,
+  "email" : "test-56ee9b622846@example.com",
+  "name" : "Theresia Flatley"
+}, {
+  "age" : 53,
+  "email" : "test-8e64d528f45c@example.com",
+  "name" : "Marlon Schaden Jr."
+}, {
+  "age" : 86,
+  "email" : "test-f315f920e421@example.com",
+  "name" : "Rod Mueller"
+}, {
+  "age" : 103,
+  "email" : "ABC",
+  "name" : "Ferdinand Purdy"
+}, {
+  "age" : 145,
+  "email" : "test-62742949962d@example.com",
+  "name" : "Thersa Koss"
+}, {
+  "age" : 106,
+  "email" : "test-30150c39d3e7@example.com",
+  "name" : "Clinton Schowalter"
+}, {
+  "age" : 54,
+  "email" : "test-9001467a728c@example.com",
+  "name" : "Leigha Runolfsson"
+}, {
+  "age" : 58,
+  "email" : "test-963b0d905342@example.com",
+  "name" : "Robert Dibbert"
+}, {
+  "age" : 48,
+  "email" : "test-08699c193af8@example.com",
+  "name" : "Ermelinda Koelpin"
+}, {
+  "age" : 75,
+  "email" : "test-79dceb7fa8cc@example.com",
+  "name" : "Miss Lesha Gottlieb"
+} ]
+▶ PUT http://localhost:3000/dev/users/test-79dceb7fa8cc@example.com
+  Request: {
+  "name" : "Brett Welch",
+  "email" : "test-42d81754ef5f@example.com"
+}
+◀ HTTP 400
+  Response: {
+  "error" : "age is required"
+}

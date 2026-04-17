@@ -1,0 +1,12 @@
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "email" : "test-2e8d49815449@example.com",
+  "age" : 116
+}
+◀ HTTP 400
+  Response: {
+  "error" : "name is required"
+}
+▶ DELETE http://localhost:3000/dev/users/test-ac653799fb51@example.com
+◀ HTTP 204
+  Response: 

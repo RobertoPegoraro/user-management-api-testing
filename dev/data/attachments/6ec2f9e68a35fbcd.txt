@@ -1,0 +1,10 @@
+▶ PUT http://localhost:3000/dev/users/nonexistent@example.com
+  Request: {
+  "name" : "Mrs. Ariana Schuppe",
+  "email" : "test-fae7115a26df@example.com",
+  "age" : 140
+}
+◀ HTTP 404
+  Response: {
+  "error" : "User not found"
+}
