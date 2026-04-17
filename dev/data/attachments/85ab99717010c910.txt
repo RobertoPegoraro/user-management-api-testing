@@ -1,0 +1,12 @@
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Risa Roob Sr.",
+  "email" : "test-16cbfa018660@example.com",
+  "age" : 1
+}
+◀ HTTP 201
+  Response: {
+  "age" : 1,
+  "email" : "test-16cbfa018660@example.com",
+  "name" : "Risa Roob Sr."
+}

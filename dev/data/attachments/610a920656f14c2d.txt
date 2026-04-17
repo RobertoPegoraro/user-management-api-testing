@@ -1,0 +1,82 @@
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Ali Brown",
+  "email" : "test-6130d10d80a1@example.com",
+  "age" : 18
+}
+◀ HTTP 201
+  Response: {
+  "age" : 18,
+  "email" : "test-6130d10d80a1@example.com",
+  "name" : "Ali Brown"
+}
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Ronald Littel DVM",
+  "email" : "test-94dc9e935197@example.com",
+  "age" : 102
+}
+◀ HTTP 201
+  Response: {
+  "age" : 102,
+  "email" : "test-94dc9e935197@example.com",
+  "name" : "Ronald Littel DVM"
+}
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Tricia Hermiston DDS",
+  "email" : "test-7ff53990c492@example.com",
+  "age" : 129
+}
+◀ HTTP 201
+  Response: {
+  "age" : 129,
+  "email" : "test-7ff53990c492@example.com",
+  "name" : "Tricia Hermiston DDS"
+}
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Jed Ruecker",
+  "email" : "test-8a5c8cd3e110@example.com",
+  "age" : 45
+}
+◀ HTTP 201
+  Response: {
+  "age" : 45,
+  "email" : "test-8a5c8cd3e110@example.com",
+  "name" : "Jed Ruecker"
+}
+▶ GET http://localhost:3000/dev/users/test-94dc9e935197@example.com
+◀ HTTP 200
+  Response: {
+  "age" : 102,
+  "email" : "test-94dc9e935197@example.com",
+  "name" : "Ronald Littel DVM"
+}
+▶ DELETE http://localhost:3000/dev/users/test-6130d10d80a1@example.com
+◀ HTTP 204
+  Response: 
+▶ GET http://localhost:3000/dev/users
+◀ HTTP 200
+  Response: [ {
+  "age" : 129,
+  "email" : "test-7ff53990c492@example.com",
+  "name" : "Tricia Hermiston DDS"
+}, {
+  "age" : 102,
+  "email" : "test-94dc9e935197@example.com",
+  "name" : "Ronald Littel DVM"
+}, {
+  "age" : 18,
+  "email" : "test-6130d10d80a1@example.com",
+  "name" : "Ali Brown"
+}, {
+  "age" : 45,
+  "email" : "test-8a5c8cd3e110@example.com",
+  "name" : "Jed Ruecker"
+} ]
+▶ GET http://localhost:3000/dev/users/test-6130d10d80a1@example.com
+◀ HTTP 500
+  Response: {
+  "error" : "Internal server error"
+}

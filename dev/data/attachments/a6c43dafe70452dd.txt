@@ -1,0 +1,25 @@
+▶ DELETE http://localhost:3000/dev/users/test-2c18f1a0f40c@example.com
+◀ HTTP 204
+  Response: 
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Brice Baumbach",
+  "email" : "test-9dd420742bd9@example.com",
+  "age" : 43
+}
+◀ HTTP 201
+  Response: {
+  "age" : 43,
+  "email" : "test-9dd420742bd9@example.com",
+  "name" : "Brice Baumbach"
+}
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Jesusita Olson",
+  "email" : "test-ed2a9ae88901@example.com",
+  "age" : 151
+}
+◀ HTTP 400
+  Response: {
+  "error" : "Age must be between 1 and 150"
+}
