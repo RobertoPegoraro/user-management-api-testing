@@ -1,0 +1,15 @@
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Daniel Abernathy",
+  "email" : "test-bfe63563a0b9@example.com",
+  "age" : 151
+}
+◀ HTTP 400
+  Response: {
+  "error" : "Age must be between 1 and 150"
+}
+▶ DELETE http://localhost:3000/prod/users/test-9ff11fcbb0fc@example.com
+◀ HTTP 401
+  Response: {
+  "error" : "Authentication required"
+}

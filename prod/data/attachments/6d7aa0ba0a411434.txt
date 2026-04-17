@@ -1,0 +1,34 @@
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Chassidy Lubowitz",
+  "email" : "test-5faf2cbcdb14@example.com",
+  "age" : 85
+}
+◀ HTTP 201
+  Response: {
+  "age" : 85,
+  "email" : "test-5faf2cbcdb14@example.com",
+  "name" : "Chassidy Lubowitz"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Winford Vandervort DVM",
+  "email" : "test-4e306e99c4a5@example.com",
+  "age" : 18
+}
+◀ HTTP 201
+  Response: {
+  "age" : 18,
+  "email" : "test-4e306e99c4a5@example.com",
+  "name" : "Winford Vandervort DVM"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Chassidy Lubowitz",
+  "email" : "test-5faf2cbcdb14@example.com",
+  "age" : 85
+}
+◀ HTTP 500
+  Response: {
+  "error" : "Internal server error"
+}

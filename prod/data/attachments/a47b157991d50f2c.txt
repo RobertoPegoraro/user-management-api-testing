@@ -1,0 +1,19 @@
+▶ PUT http://localhost:3000/prod/users/test-e5f63ba70f41@example.com
+  Request: {
+  "name" : "Kyle Olson",
+  "email" : "test-e5f63ba70f41@example.com",
+  "age" : 147
+}
+◀ HTTP 200
+  Response: {
+  "age" : 147,
+  "email" : "test-e5f63ba70f41@example.com",
+  "name" : "Kyle Olson"
+}
+▶ GET http://localhost:3000/prod/users/test-e5f63ba70f41@example.com
+◀ HTTP 200
+  Response: {
+  "age" : 92,
+  "email" : "test-e5f63ba70f41@example.com",
+  "name" : "Olen Ledner"
+}

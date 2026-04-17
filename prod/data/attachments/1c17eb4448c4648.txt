@@ -1,0 +1,9 @@
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Ron Schroeder",
+  "age" : 23
+}
+◀ HTTP 400
+  Response: {
+  "error" : "email is required"
+}

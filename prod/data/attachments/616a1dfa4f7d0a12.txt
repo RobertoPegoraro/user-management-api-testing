@@ -1,0 +1,7 @@
+▶ GET http://localhost:3000/prod/users/test-3c46ad674153@example.com
+◀ HTTP 200
+  Response: {
+  "age" : 61,
+  "email" : "test-3c46ad674153@example.com",
+  "name" : "Kym O'Connell"
+}

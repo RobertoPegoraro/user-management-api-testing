@@ -1,0 +1,78 @@
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Kym O'Connell",
+  "email" : "test-3c46ad674153@example.com",
+  "age" : 61
+}
+◀ HTTP 201
+  Response: {
+  "age" : 61,
+  "email" : "test-3c46ad674153@example.com",
+  "name" : "Kym O'Connell"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Chi Raynor",
+  "email" : "test-9c7449e12544@example.com",
+  "age" : 120
+}
+◀ HTTP 201
+  Response: {
+  "age" : 120,
+  "email" : "test-9c7449e12544@example.com",
+  "name" : "Chi Raynor"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Dr. Dion McLaughlin",
+  "email" : "test-3f555f4396d0@example.com",
+  "age" : 96
+}
+◀ HTTP 201
+  Response: {
+  "age" : 96,
+  "email" : "test-3f555f4396d0@example.com",
+  "name" : "Dr. Dion McLaughlin"
+}
+▶ GET http://localhost:3000/prod/users/test-9c7449e12544@example.com
+◀ HTTP 200
+  Response: {
+  "age" : 120,
+  "email" : "test-9c7449e12544@example.com",
+  "name" : "Chi Raynor"
+}
+▶ GET http://localhost:3000/prod/users
+◀ HTTP 200
+  Response: [ {
+  "age" : 61,
+  "email" : "test-3c46ad674153@example.com",
+  "name" : "Kym O'Connell"
+}, {
+  "age" : 120,
+  "email" : "test-9c7449e12544@example.com",
+  "name" : "Chi Raynor"
+}, {
+  "age" : 96,
+  "email" : "test-3f555f4396d0@example.com",
+  "name" : "Dr. Dion McLaughlin"
+} ]
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Mack Weber",
+  "email" : "test-8f9b21e982af@example.com",
+  "age" : 15
+}
+◀ HTTP 201
+  Response: {
+  "age" : 15,
+  "email" : "test-8f9b21e982af@example.com",
+  "name" : "Mack Weber"
+}
+▶ DELETE http://localhost:3000/prod/users/test-8f9b21e982af@example.com
+◀ HTTP 204
+  Response: 
+▶ GET http://localhost:3000/prod/users/test-8f9b21e982af@example.com
+◀ HTTP 500
+  Response: {
+  "error" : "Internal server error"
+}

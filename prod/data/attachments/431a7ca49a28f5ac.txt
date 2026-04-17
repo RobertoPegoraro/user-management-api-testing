@@ -1,0 +1,27 @@
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Aja Mitchell",
+  "email" : "test-9ff11fcbb0fc@example.com",
+  "age" : 78
+}
+◀ HTTP 201
+  Response: {
+  "age" : 78,
+  "email" : "test-9ff11fcbb0fc@example.com",
+  "name" : "Aja Mitchell"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Mr. Russel Parisian",
+  "email" : "test-1f8d856c1203@example.com",
+  "age" : 0
+}
+◀ HTTP 400
+  Response: {
+  "error" : "Age must be between 1 and 150"
+}
+▶ DELETE http://localhost:3000/prod/users/test-a371f5b3a648@example.com
+◀ HTTP 404
+  Response: {
+  "error" : "User not found"
+}
