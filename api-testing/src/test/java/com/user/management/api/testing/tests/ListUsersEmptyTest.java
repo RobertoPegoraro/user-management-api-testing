@@ -12,7 +12,7 @@ import com.user.management.api.testing.model.User;
 public class ListUsersEmptyTest extends BaseTest {
 
     @Override
-    @BeforeClass
+    @BeforeClass(groups = "sequential")
     void setup() {
 
         userService = serviceWithToken(Config.get().token());
