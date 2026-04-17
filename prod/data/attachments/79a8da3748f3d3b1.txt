@@ -1,0 +1,17 @@
+▶ GET http://localhost:3000/prod/users/test-0a0bdfba2079@example.com
+◀ HTTP 200
+  Response: {
+  "age" : 120,
+  "email" : "test-0a0bdfba2079@example.com",
+  "name" : "Mr. Thad Barrows"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Mrs. Gabriel Gutkowski",
+  "email" : "test-5fee77fc34bf@example.com",
+  "age" : 151
+}
+◀ HTTP 400
+  Response: {
+  "error" : "Age must be between 1 and 150"
+}

@@ -1,0 +1,15 @@
+▶ DELETE http://localhost:3000/prod/users/test-9451711fb1ea@example.com
+◀ HTTP 204
+  Response: 
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Ms. Daryl Monahan",
+  "email" : "test-cf494b13dc90@example.com",
+  "age" : 144
+}
+◀ HTTP 201
+  Response: {
+  "age" : 144,
+  "email" : "test-cf494b13dc90@example.com",
+  "name" : "Ms. Daryl Monahan"
+}

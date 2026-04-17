@@ -1,0 +1,36 @@
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Iva Schneider DDS",
+  "email" : "test-9a54c2bc2310@example.com",
+  "age" : 79
+}
+◀ HTTP 201
+  Response: {
+  "age" : 79,
+  "email" : "test-9a54c2bc2310@example.com",
+  "name" : "Iva Schneider DDS"
+}
+▶ PUT http://localhost:3000/prod/users/test-173551dd2bd3@example.com
+  Request: {
+  "name" : "Marhta Schneider DVM",
+  "email" : "test-173551dd2bd3@example.com",
+  "age" : 110
+}
+◀ HTTP 200
+  Response: {
+  "age" : 110,
+  "email" : "test-173551dd2bd3@example.com",
+  "name" : "Marhta Schneider DVM"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Dr. Sirena Renner",
+  "email" : "ABC",
+  "age" : 33
+}
+◀ HTTP 201
+  Response: {
+  "age" : 33,
+  "email" : "ABC",
+  "name" : "Dr. Sirena Renner"
+}

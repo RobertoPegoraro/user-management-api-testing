@@ -1,0 +1,10 @@
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Earline Fritsch",
+  "email" : "test-89f4c175fff9@example.com",
+  "age" : 8
+}
+◀ HTTP 500
+  Response: {
+  "error" : "Internal server error"
+}

@@ -1,0 +1,12 @@
+▶ GET http://localhost:3000/prod/users/test-173551dd2bd3@example.com
+◀ HTTP 200
+  Response: {
+  "age" : 94,
+  "email" : "test-173551dd2bd3@example.com",
+  "name" : "Gwenn Stroman"
+}
+▶ DELETE http://localhost:3000/prod/users/test-9a54c2bc2310@example.com
+◀ HTTP 401
+  Response: {
+  "error" : "Authentication required"
+}

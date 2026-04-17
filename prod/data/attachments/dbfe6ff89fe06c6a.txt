@@ -1,0 +1,29 @@
+▶ DELETE http://localhost:3000/prod/users/test-098935c8c456@example.com
+◀ HTTP 401
+  Response: {
+  "error" : "Authentication required"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Mr. Thad Barrows",
+  "email" : "test-0a0bdfba2079@example.com",
+  "age" : 120
+}
+◀ HTTP 201
+  Response: {
+  "age" : 120,
+  "email" : "test-0a0bdfba2079@example.com",
+  "name" : "Mr. Thad Barrows"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Elsie Jaskolski",
+  "email" : "test-1170c8ce90b7@example.com",
+  "age" : 1
+}
+◀ HTTP 201
+  Response: {
+  "age" : 1,
+  "email" : "test-1170c8ce90b7@example.com",
+  "name" : "Elsie Jaskolski"
+}

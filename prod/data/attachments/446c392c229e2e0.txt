@@ -1,0 +1,17 @@
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Alton Schmidt Sr.",
+  "email" : "test-9451711fb1ea@example.com",
+  "age" : 34
+}
+◀ HTTP 201
+  Response: {
+  "age" : 34,
+  "email" : "test-9451711fb1ea@example.com",
+  "name" : "Alton Schmidt Sr."
+}
+▶ GET http://localhost:3000/prod/users/nonexistent@example.com
+◀ HTTP 500
+  Response: {
+  "error" : "Internal server error"
+}

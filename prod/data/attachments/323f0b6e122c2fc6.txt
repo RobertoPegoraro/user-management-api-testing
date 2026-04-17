@@ -1,0 +1,10 @@
+▶ PUT http://localhost:3000/prod/users/test-bc2fd74eb5ce@example.com
+  Request: {
+  "name" : "Dr. Cristy Murazik",
+  "email" : "test-bc23d42106b2@example.com",
+  "age" : 0
+}
+◀ HTTP 400
+  Response: {
+  "error" : "Age must be between 1 and 150"
+}
