@@ -51,18 +51,6 @@ jobs:
       - name: Run E2E tests
         run: ./gradlew :api-testing:testPipeline -Denv=${{ matrix.env }}
 
-      - name: Dump API logs
-        if: always()
-        run: docker logs api
-
-      - name: Publish Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v2
-        if: always()
-        with:
-          check_name: Test Results (${{ matrix.env }})
-          files: api-testing/build/test-results/**/*.xml
-          comment_mode: always
-
       - name: Install Allure CLI
         if: always()
         run: npm install -g allure-commandline --no-save
