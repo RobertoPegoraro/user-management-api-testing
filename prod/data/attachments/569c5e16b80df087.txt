@@ -1,0 +1,34 @@
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Zella Haag",
+  "email" : "test-5799cd93a1c4@example.com",
+  "age" : 108
+}
+◀ HTTP 201
+  Response: {
+  "age" : 108,
+  "email" : "test-5799cd93a1c4@example.com",
+  "name" : "Zella Haag"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Ms. Carol Fay",
+  "email" : "test-893be704d65d@example.com",
+  "age" : 40
+}
+◀ HTTP 201
+  Response: {
+  "age" : 40,
+  "email" : "test-893be704d65d@example.com",
+  "name" : "Ms. Carol Fay"
+}
+▶ PUT http://localhost:3000/prod/users/test-5799cd93a1c4@example.com
+  Request: {
+  "name" : "Garret Davis",
+  "email" : "ABC",
+  "age" : 49
+}
+◀ HTTP 400
+  Response: {
+  "error" : "Invalid email format"
+}

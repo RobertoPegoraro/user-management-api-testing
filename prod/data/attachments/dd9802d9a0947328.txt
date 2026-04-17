@@ -1,0 +1,29 @@
+▶ GET http://localhost:3000/prod/users/test-6e912a243b23@example.com
+◀ HTTP 200
+  Response: {
+  "age" : 133,
+  "email" : "test-6e912a243b23@example.com",
+  "name" : "Cecil O'Conner"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "John Thiel",
+  "email" : "test-a429445ab524@example.com",
+  "age" : 36
+}
+◀ HTTP 201
+  Response: {
+  "age" : 36,
+  "email" : "test-a429445ab524@example.com",
+  "name" : "John Thiel"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Soo Powlowski",
+  "email" : "test-579f7e1f2fd7@example.com",
+  "age" : 76
+}
+◀ HTTP 500
+  Response: {
+  "error" : "Internal server error"
+}

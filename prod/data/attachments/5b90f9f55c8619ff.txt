@@ -1,0 +1,3 @@
+▶ GET http://localhost:3000/prod/users
+◀ HTTP 200
+  Response: [ ]
