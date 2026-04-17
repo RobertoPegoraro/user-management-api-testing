@@ -1,0 +1,22 @@
+▶ PUT http://localhost:3000/dev/users/test-368c47b6b14e@example.com
+  Request: {
+  "name" : "Louisa Hyatt",
+  "email" : "test-b815e8216621@example.com",
+  "age" : 0
+}
+◀ HTTP 400
+  Response: {
+  "error" : "Age must be between 1 and 150"
+}
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "email" : "test-93713a0ca931@example.com",
+  "age" : 1
+}
+◀ HTTP 400
+  Response: {
+  "error" : "name is required"
+}
+▶ DELETE http://localhost:3000/dev/users/test-23c9b2d78642@example.com
+◀ HTTP 204
+  Response: 

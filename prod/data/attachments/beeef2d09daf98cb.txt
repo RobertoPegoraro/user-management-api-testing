@@ -1,0 +1,33 @@
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "email" : "test-94a7ae3ba176@example.com",
+  "age" : 80
+}
+◀ HTTP 400
+  Response: {
+  "error" : "name is required"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Janie Shields",
+  "email" : "test-05492c7567d8@example.com",
+  "age" : 66
+}
+◀ HTTP 201
+  Response: {
+  "age" : 66,
+  "email" : "test-05492c7567d8@example.com",
+  "name" : "Janie Shields"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Ms. Augustine Reinger",
+  "email" : "test-6ed90fccf62a@example.com",
+  "age" : 49
+}
+◀ HTTP 201
+  Response: {
+  "age" : 49,
+  "email" : "test-6ed90fccf62a@example.com",
+  "name" : "Ms. Augustine Reinger"
+}

@@ -1,0 +1,46 @@
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Lesley Stroman",
+  "email" : "test-ac7389c7fffd@example.com",
+  "age" : 112
+}
+◀ HTTP 201
+  Response: {
+  "age" : 112,
+  "email" : "test-ac7389c7fffd@example.com",
+  "name" : "Lesley Stroman"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Mario Kulas DDS",
+  "email" : "test-600ba785d355@example.com",
+  "age" : 117
+}
+◀ HTTP 201
+  Response: {
+  "age" : 117,
+  "email" : "test-600ba785d355@example.com",
+  "name" : "Mario Kulas DDS"
+}
+▶ PUT http://localhost:3000/prod/users/test-600ba785d355@example.com
+  Request: {
+  "name" : "Milan Erdman",
+  "email" : "test-0b700725a07b@example.com",
+  "age" : 112
+}
+◀ HTTP 200
+  Response: {
+  "age" : 112,
+  "email" : "test-0b700725a07b@example.com",
+  "name" : "Milan Erdman"
+}
+▶ PUT http://localhost:3000/prod/users/test-ac7389c7fffd@example.com
+  Request: {
+  "name" : "Torri Kihn",
+  "email" : "test-3ea33b401b33@example.com",
+  "age" : 0
+}
+◀ HTTP 400
+  Response: {
+  "error" : "Age must be between 1 and 150"
+}

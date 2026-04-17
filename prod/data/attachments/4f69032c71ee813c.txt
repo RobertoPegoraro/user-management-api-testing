@@ -1,0 +1,5 @@
+▶ DELETE http://localhost:3000/prod/users/test-cce40038db53@example.com
+◀ HTTP 404
+  Response: {
+  "error" : "User not found"
+}

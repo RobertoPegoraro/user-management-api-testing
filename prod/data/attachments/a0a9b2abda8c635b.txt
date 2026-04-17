@@ -1,0 +1,22 @@
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Trevor Ankunding",
+  "email" : "test-10a52b2fca05@example.com",
+  "age" : 15
+}
+◀ HTTP 201
+  Response: {
+  "age" : 15,
+  "email" : "test-10a52b2fca05@example.com",
+  "name" : "Trevor Ankunding"
+}
+▶ GET http://localhost:3000/prod/users/test-347aec25ff3b@example.com
+◀ HTTP 200
+  Response: {
+  "age" : 143,
+  "email" : "test-347aec25ff3b@example.com",
+  "name" : "Miss Marco Kertzmann"
+}
+▶ DELETE http://localhost:3000/prod/users/test-10a52b2fca05@example.com
+◀ HTTP 204
+  Response: 

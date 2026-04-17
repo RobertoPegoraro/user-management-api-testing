@@ -1,0 +1,10 @@
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Rosenda Daugherty",
+  "email" : "test-d18989109b8e@example.com",
+  "age" : 151
+}
+◀ HTTP 400
+  Response: {
+  "error" : "Age must be between 1 and 150"
+}

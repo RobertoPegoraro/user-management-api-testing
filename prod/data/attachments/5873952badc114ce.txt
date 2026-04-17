@@ -1,0 +1,22 @@
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Dr. Jefferson Champlin",
+  "email" : "test-80039ecbd0ed@example.com",
+  "age" : 147
+}
+◀ HTTP 201
+  Response: {
+  "age" : 147,
+  "email" : "test-80039ecbd0ed@example.com",
+  "name" : "Dr. Jefferson Champlin"
+}
+▶ PUT http://localhost:3000/prod/users/test-80039ecbd0ed@example.com
+  Request: {
+  "name" : "Annika Abernathy",
+  "email" : "ABC",
+  "age" : 48
+}
+◀ HTTP 400
+  Response: {
+  "error" : "Invalid email format"
+}

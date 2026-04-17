@@ -1,0 +1,17 @@
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Osvaldo Beier",
+  "email" : "ABC",
+  "age" : 142
+}
+◀ HTTP 201
+  Response: {
+  "age" : 142,
+  "email" : "ABC",
+  "name" : "Osvaldo Beier"
+}
+▶ DELETE http://localhost:3000/prod/users/nonexistent@example.com
+◀ HTTP 404
+  Response: {
+  "error" : "User not found"
+}

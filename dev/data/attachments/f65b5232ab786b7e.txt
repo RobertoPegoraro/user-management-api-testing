@@ -1,0 +1,29 @@
+▶ DELETE http://localhost:3000/dev/users/test-245088d790c8@example.com
+◀ HTTP 404
+  Response: {
+  "error" : "User not found"
+}
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Ms. Arlen O'Kon",
+  "email" : "test-18d3ded9f3fd@example.com",
+  "age" : 51
+}
+◀ HTTP 201
+  Response: {
+  "age" : 51,
+  "email" : "test-18d3ded9f3fd@example.com",
+  "name" : "Ms. Arlen O'Kon"
+}
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Burton Franecki",
+  "email" : "test-8d27d1c98d28@example.com",
+  "age" : 1
+}
+◀ HTTP 201
+  Response: {
+  "age" : 1,
+  "email" : "test-8d27d1c98d28@example.com",
+  "name" : "Burton Franecki"
+}

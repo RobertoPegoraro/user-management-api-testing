@@ -1,0 +1,72 @@
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Julio Mitchell II",
+  "email" : "test-a9ac9b5ec2d0@example.com",
+  "age" : 146
+}
+◀ HTTP 500
+  Response: {
+  "error" : "Internal server error"
+}
+▶ GET http://localhost:3000/prod/users
+◀ HTTP 200
+  Response: [ {
+  "age" : 143,
+  "email" : "test-347aec25ff3b@example.com",
+  "name" : "Miss Marco Kertzmann"
+}, {
+  "age" : 77,
+  "email" : "test-fabd564d0854@example.com",
+  "name" : "Clarence Macejkovic DVM"
+}, {
+  "age" : 42,
+  "email" : "test-e4f97e104f3e@example.com",
+  "name" : "Oliver Kutch"
+}, {
+  "age" : 150,
+  "email" : "test-1316f9f39b91@example.com",
+  "name" : "Erik Altenwerth"
+}, {
+  "age" : 1,
+  "email" : "test-d94b5f4c408b@example.com",
+  "name" : "Murray Kilback Jr."
+}, {
+  "age" : 149,
+  "email" : "test-1a84c79e5b62@example.com",
+  "name" : "Cherie Ritchie"
+}, {
+  "age" : 83,
+  "email" : "test-34a0c581beab@example.com",
+  "name" : "Miki Luettgen"
+}, {
+  "age" : 142,
+  "email" : "ABC",
+  "name" : "Osvaldo Beier"
+}, {
+  "age" : 2,
+  "email" : "test-e5bc01664a5e@example.com",
+  "name" : "Miss Terry Mertz"
+}, {
+  "age" : 91,
+  "email" : "test-9512cdb32e33@example.com",
+  "name" : "Miss Virgil Conroy"
+}, {
+  "age" : 66,
+  "email" : "test-05492c7567d8@example.com",
+  "name" : "Janie Shields"
+}, {
+  "age" : 49,
+  "email" : "test-6ed90fccf62a@example.com",
+  "name" : "Ms. Augustine Reinger"
+}, {
+  "age" : 146,
+  "email" : "test-a9ac9b5ec2d0@example.com",
+  "name" : "Julio Mitchell II"
+} ]
+▶ GET http://localhost:3000/prod/users/test-05492c7567d8@example.com
+◀ HTTP 200
+  Response: {
+  "age" : 66,
+  "email" : "test-05492c7567d8@example.com",
+  "name" : "Janie Shields"
+}
