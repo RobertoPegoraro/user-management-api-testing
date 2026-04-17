@@ -1,0 +1,26 @@
+▶ GET http://localhost:3000/prod/users/test-a3fefbaaee0e@example.com
+◀ HTTP 200
+  Response: {
+  "age" : 95,
+  "email" : "test-a3fefbaaee0e@example.com",
+  "name" : "Mrs. Frederick Denesik"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Fletcher Abernathy",
+  "age" : 15
+}
+◀ HTTP 400
+  Response: {
+  "error" : "email is required"
+}
+▶ PUT http://localhost:3000/prod/users/test-7813edb76054@example.com
+  Request: {
+  "name" : "Mr. Lurline Carroll",
+  "email" : "test-96c143891271@example.com",
+  "age" : 0
+}
+◀ HTTP 400
+  Response: {
+  "error" : "Age must be between 1 and 150"
+}

@@ -1,0 +1,71 @@
+▶ GET http://localhost:3000/prod/users
+◀ HTTP 200
+  Response: [ {
+  "age" : 41,
+  "email" : "test-b4a345fd3816@example.com",
+  "name" : "Kizzy Kertzmann"
+}, {
+  "age" : 61,
+  "email" : "test-0e8f406ba841@example.com",
+  "name" : "Armando Cummings"
+}, {
+  "age" : 3,
+  "email" : "test-585843f85198@example.com",
+  "name" : "Ermelinda Herzog"
+}, {
+  "age" : 150,
+  "email" : "test-619035ba3b66@example.com",
+  "name" : "Kirby Windler"
+}, {
+  "age" : 1,
+  "email" : "test-e06e71165779@example.com",
+  "name" : "Adrianne Murazik"
+}, {
+  "age" : 66,
+  "email" : "test-a7c5264dc1e1@example.com",
+  "name" : "Darwin Ruecker MD"
+}, {
+  "age" : 73,
+  "email" : "test-736a25191283@example.com",
+  "name" : "Keith Howell"
+}, {
+  "age" : 36,
+  "email" : "test-b662f0116f8b@example.com",
+  "name" : "Dolly Romaguera"
+}, {
+  "age" : 36,
+  "email" : "ABC",
+  "name" : "Marquerite Kunde"
+}, {
+  "age" : 101,
+  "email" : "test-ee8b7cce28c9@example.com",
+  "name" : "Mr. Breana Hyatt"
+}, {
+  "age" : 82,
+  "email" : "test-ae71bd461572@example.com",
+  "name" : "Conrad Stoltenberg"
+}, {
+  "age" : 95,
+  "email" : "test-a3fefbaaee0e@example.com",
+  "name" : "Mrs. Frederick Denesik"
+}, {
+  "age" : 131,
+  "email" : "test-7813edb76054@example.com",
+  "name" : "Shannon Stark Jr."
+}, {
+  "age" : 48,
+  "email" : "test-c55e0cefeb7d@example.com",
+  "name" : "Karie Rath"
+} ]
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Danae Dooley",
+  "email" : "test-f793ede51cf1@example.com",
+  "age" : 74
+}
+◀ HTTP 201
+  Response: {
+  "age" : 74,
+  "email" : "test-f793ede51cf1@example.com",
+  "name" : "Danae Dooley"
+}

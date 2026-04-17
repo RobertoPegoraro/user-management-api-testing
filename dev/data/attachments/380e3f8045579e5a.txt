@@ -1,0 +1,33 @@
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Ulysses Heaney",
+  "email" : "test-bfbf2fc51549@example.com",
+  "age" : 132
+}
+◀ HTTP 201
+  Response: {
+  "age" : 132,
+  "email" : "test-bfbf2fc51549@example.com",
+  "name" : "Ulysses Heaney"
+}
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Shelley Bode DVM",
+  "email" : "test-3dba313f7b1c@example.com",
+  "age" : 144
+}
+◀ HTTP 201
+  Response: {
+  "age" : 144,
+  "email" : "test-3dba313f7b1c@example.com",
+  "name" : "Shelley Bode DVM"
+}
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Randa Rodriguez II",
+  "email" : "test-4710218a8d11@example.com"
+}
+◀ HTTP 400
+  Response: {
+  "error" : "age is required"
+}

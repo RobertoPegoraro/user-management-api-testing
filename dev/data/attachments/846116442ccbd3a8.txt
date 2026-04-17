@@ -1,0 +1,15 @@
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Roosevelt Dare DVM",
+  "email" : "test-7fb0aa394825@example.com",
+  "age" : 57
+}
+◀ HTTP 201
+  Response: {
+  "age" : 57,
+  "email" : "test-7fb0aa394825@example.com",
+  "name" : "Roosevelt Dare DVM"
+}
+▶ DELETE http://localhost:3000/dev/users/test-b68e2697f984@example.com
+◀ HTTP 204
+  Response: 

@@ -1,0 +1,5 @@
+▶ DELETE http://localhost:3000/prod/users/test-ae71bd461572@example.com
+◀ HTTP 401
+  Response: {
+  "error" : "Authentication required"
+}

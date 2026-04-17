@@ -1,0 +1,20 @@
+▶ PUT http://localhost:3000/prod/users/test-c55e0cefeb7d@example.com
+  Request: {
+  "name" : "Barbera Hamill",
+  "email" : "test-a3b36ec8f539@example.com",
+  "age" : 151
+}
+◀ HTTP 400
+  Response: {
+  "error" : "Age must be between 1 and 150"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Danae Dooley",
+  "email" : "test-f793ede51cf1@example.com",
+  "age" : 74
+}
+◀ HTTP 500
+  Response: {
+  "error" : "Internal server error"
+}
