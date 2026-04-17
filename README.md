@@ -18,6 +18,12 @@ End-to-end REST Assured tests for the User Management API (`/dev` and `/prod` en
 
 ---
 
+## Latest Report
+
+[Allure Report DEV](https://robertopegoraro.github.io/user-management-api-testing/dev/)
+
+[Allure Report PROD](https://robertopegoraro.github.io/user-management-api-testing/prod/)
+
 ## Bug Report
 
 Results from test run against `http://localhost:3000` (Docker). Bugs reproduced in both environments unless noted.
