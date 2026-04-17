@@ -25,7 +25,7 @@ public abstract class BaseTest {
     }
 
     @BeforeClass
-    void setup() {
+    protected void setup() {
 
         userService = serviceWithNoToken();
     }

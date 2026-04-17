@@ -12,7 +12,7 @@ public class DeleteUserTest extends BaseTest {
 
     @Override
     @BeforeClass
-    void setup() {
+    protected void setup() {
 
         userService = serviceWithToken(Config.get().token());
     }

@@ -13,7 +13,7 @@ public class ListUsersEmptyTest extends BaseTest {
 
     @Override
     @BeforeClass(groups = "sequential")
-    void setup() {
+    protected void setup() {
 
         userService = serviceWithToken(Config.get().token());
         List<User> users = userService.listUsers().getData();
