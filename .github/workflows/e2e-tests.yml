@@ -11,6 +11,8 @@ jobs:
   e2e-tests:
     name: E2E - ${{ matrix.env }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     strategy:
       fail-fast: false
@@ -51,21 +53,18 @@ jobs:
       - name: Run E2E tests
         run: ./gradlew :api-testing:testPipeline -Denv=${{ matrix.env }}
 
-      - name: Install Allure CLI
-        if: always()
-        run: npm install -g allure-commandline --no-save
-
-      - name: Generate Allure Report
-        if: always()
-        run: |
-          allure generate api-testing/build/allure-results \
-            --clean \
-            -o api-testing/build/allure-report
-
-      - name: Upload Allure Report
-        uses: actions/upload-artifact@v4
+      - name: Deploy Allure to GitHub Pages
+        uses: simple-elf/allure-report-action@v1.7
         if: always()
         with:
-          name: allure-report-${{ matrix.env }}
-          path: api-testing/build/allure-report
-          retention-days: 30
+          allure_results: api-testing/build/allure-results
+          allure_history: allure-history
+          subfolder: ${{ matrix.env }}
+
+      - name: Publish to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history
