@@ -1,0 +1,12 @@
+▶ PUT http://localhost:3000/prod/users/test-340a490de11f@example.com
+  Request: {
+  "name" : "Jong Lang",
+  "email" : "test-8e6d0f46e675@example.com",
+  "age" : 13
+}
+◀ HTTP 200
+  Response: {
+  "age" : 13,
+  "email" : "test-8e6d0f46e675@example.com",
+  "name" : "Jong Lang"
+}

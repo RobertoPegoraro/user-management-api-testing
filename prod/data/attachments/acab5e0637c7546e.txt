@@ -1,0 +1,46 @@
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Kamilah Hill",
+  "email" : "test-e34eb6ea9b1e@example.com",
+  "age" : 128
+}
+◀ HTTP 201
+  Response: {
+  "age" : 128,
+  "email" : "test-e34eb6ea9b1e@example.com",
+  "name" : "Kamilah Hill"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Valentine Abernathy",
+  "email" : "test-68596549c4b6@example.com",
+  "age" : 35
+}
+◀ HTTP 201
+  Response: {
+  "age" : 35,
+  "email" : "test-68596549c4b6@example.com",
+  "name" : "Valentine Abernathy"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Chung Hettinger",
+  "email" : "test-340a490de11f@example.com",
+  "age" : 121
+}
+◀ HTTP 201
+  Response: {
+  "age" : 121,
+  "email" : "test-340a490de11f@example.com",
+  "name" : "Chung Hettinger"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Kamilah Hill",
+  "email" : "test-e34eb6ea9b1e@example.com",
+  "age" : 128
+}
+◀ HTTP 500
+  Response: {
+  "error" : "Internal server error"
+}

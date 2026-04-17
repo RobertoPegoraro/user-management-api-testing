@@ -1,0 +1,24 @@
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "George Kulas",
+  "email" : "test-486dea0c0e5e@example.com",
+  "age" : 123
+}
+◀ HTTP 201
+  Response: {
+  "age" : 123,
+  "email" : "test-486dea0c0e5e@example.com",
+  "name" : "George Kulas"
+}
+▶ PUT http://localhost:3000/prod/users/test-e0bc100b717f@example.com
+  Request: {
+  "name" : "Mr. Lanny Cruickshank",
+  "email" : "test-e0bc100b717f@example.com",
+  "age" : 12
+}
+◀ HTTP 200
+  Response: {
+  "age" : 12,
+  "email" : "test-e0bc100b717f@example.com",
+  "name" : "Mr. Lanny Cruickshank"
+}

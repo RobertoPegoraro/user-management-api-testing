@@ -1,0 +1,24 @@
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Arcelia Gleichner",
+  "email" : "test-e375177ca402@example.com",
+  "age" : 85
+}
+◀ HTTP 201
+  Response: {
+  "age" : 85,
+  "email" : "test-e375177ca402@example.com",
+  "name" : "Arcelia Gleichner"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Jonas Graham",
+  "email" : "test-90dac256c7d4@example.com",
+  "age" : 1
+}
+◀ HTTP 201
+  Response: {
+  "age" : 1,
+  "email" : "test-90dac256c7d4@example.com",
+  "name" : "Jonas Graham"
+}

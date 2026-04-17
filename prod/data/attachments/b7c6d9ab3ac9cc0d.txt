@@ -1,0 +1,20 @@
+▶ DELETE http://localhost:3000/prod/users/test-e375177ca402@example.com
+◀ HTTP 401
+  Response: {
+  "error" : "Authentication required"
+}
+▶ DELETE http://localhost:3000/prod/users/test-92ac2e803608@example.com
+◀ HTTP 404
+  Response: {
+  "error" : "User not found"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Robena Gaylord",
+  "email" : "test-483590ff29e9@example.com",
+  "age" : 0
+}
+◀ HTTP 400
+  Response: {
+  "error" : "Age must be between 1 and 150"
+}

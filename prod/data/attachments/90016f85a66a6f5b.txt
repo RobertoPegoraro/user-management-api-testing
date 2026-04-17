@@ -1,0 +1,72 @@
+▶ GET http://localhost:3000/prod/users
+◀ HTTP 200
+  Response: [ {
+  "age" : 21,
+  "email" : "test-80e8e4e9e8cb@example.com",
+  "name" : "Sammy Dicki"
+}, {
+  "age" : 143,
+  "email" : "test-df0d43b4359d@example.com",
+  "name" : "Harris McLaughlin"
+}, {
+  "age" : 131,
+  "email" : "test-6fc99339b8a4@example.com",
+  "name" : "Miss Mitchel Sawayn"
+}, {
+  "age" : 150,
+  "email" : "test-9b07ba659477@example.com",
+  "name" : "Timika Connelly"
+}, {
+  "age" : 6,
+  "email" : "test-91f0860bb755@example.com",
+  "name" : "Scottie Swaniawski"
+}, {
+  "age" : 85,
+  "email" : "test-e375177ca402@example.com",
+  "name" : "Arcelia Gleichner"
+}, {
+  "age" : 1,
+  "email" : "test-90dac256c7d4@example.com",
+  "name" : "Jonas Graham"
+}, {
+  "age" : 123,
+  "email" : "test-e5c799684037@example.com",
+  "name" : "Ms. Shaun Farrell"
+}, {
+  "age" : 108,
+  "email" : "ABC",
+  "name" : "Mr. Donald Labadie"
+}, {
+  "age" : 111,
+  "email" : "test-da1865d03d6c@example.com",
+  "name" : "Trenton Doyle"
+}, {
+  "age" : 59,
+  "email" : "test-e0bc100b717f@example.com",
+  "name" : "Gerald Hodkiewicz"
+}, {
+  "age" : 123,
+  "email" : "test-486dea0c0e5e@example.com",
+  "name" : "George Kulas"
+} ]
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Bobby Koss",
+  "email" : "test-d734e1aef9da@example.com",
+  "age" : 126
+}
+◀ HTTP 201
+  Response: {
+  "age" : 126,
+  "email" : "test-d734e1aef9da@example.com",
+  "name" : "Bobby Koss"
+}
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "email" : "test-8aeb540c156e@example.com",
+  "age" : 23
+}
+◀ HTTP 400
+  Response: {
+  "error" : "name is required"
+}

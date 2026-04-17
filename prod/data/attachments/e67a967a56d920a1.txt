@@ -1,0 +1,17 @@
+▶ POST http://localhost:3000/prod/users
+  Request: {
+  "name" : "Trenton Doyle",
+  "email" : "test-da1865d03d6c@example.com",
+  "age" : 111
+}
+◀ HTTP 201
+  Response: {
+  "age" : 111,
+  "email" : "test-da1865d03d6c@example.com",
+  "name" : "Trenton Doyle"
+}
+▶ DELETE http://localhost:3000/prod/users/test-da1865d03d6c@example.com
+◀ HTTP 401
+  Response: {
+  "error" : "Authentication required"
+}
