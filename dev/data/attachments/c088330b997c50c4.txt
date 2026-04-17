@@ -1,0 +1,81 @@
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Chan Ratke",
+  "email" : "test-3d2ee8fe63f4@example.com",
+  "age" : 14
+}
+◀ HTTP 201
+  Response: {
+  "age" : 14,
+  "email" : "test-3d2ee8fe63f4@example.com",
+  "name" : "Chan Ratke"
+}
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Chan Ratke",
+  "email" : "test-3d2ee8fe63f4@example.com",
+  "age" : 14
+}
+◀ HTTP 500
+  Response: {
+  "error" : "Internal server error"
+}
+▶ GET http://localhost:3000/dev/users
+◀ HTTP 200
+  Response: [ {
+  "age" : 149,
+  "email" : "test-a5fed2c320f8@example.com",
+  "name" : "Tom Kuphal Sr."
+}, {
+  "age" : 98,
+  "email" : "test-9e821c97074d@example.com",
+  "name" : "Dr. Sherie Ortiz"
+}, {
+  "age" : 34,
+  "email" : "test-b6cf87314b0b@example.com",
+  "name" : "Margarete Johnston"
+}, {
+  "age" : 150,
+  "email" : "test-5f006f86cad7@example.com",
+  "name" : "Darius Hegmann III"
+}, {
+  "age" : 1,
+  "email" : "test-1b8f676643da@example.com",
+  "name" : "Carlota Towne II"
+}, {
+  "age" : 136,
+  "email" : "test-8be69ee87aad@example.com",
+  "name" : "Weldon Pfeffer"
+}, {
+  "age" : 127,
+  "email" : "test-925354a1d4a9@example.com",
+  "name" : "Mr. Duncan Cole"
+}, {
+  "age" : 125,
+  "email" : "ABC",
+  "name" : "Cleo Berge"
+}, {
+  "age" : 74,
+  "email" : "test-2565636942d6@example.com",
+  "name" : "Miss Hiram Kuhn"
+}, {
+  "age" : 13,
+  "email" : "test-504972d35a91@example.com",
+  "name" : "Cedrick O'Kon"
+}, {
+  "age" : 14,
+  "email" : "test-3d2ee8fe63f4@example.com",
+  "name" : "Chan Ratke"
+} ]
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Thao Lind",
+  "email" : "test-7e7f7abdaab0@example.com",
+  "age" : 64
+}
+◀ HTTP 201
+  Response: {
+  "age" : 64,
+  "email" : "test-7e7f7abdaab0@example.com",
+  "name" : "Thao Lind"
+}

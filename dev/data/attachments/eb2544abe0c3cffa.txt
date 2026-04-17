@@ -1,0 +1,34 @@
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Zachariah Collier",
+  "email" : "test-15d3ac56c714@example.com",
+  "age" : 116
+}
+◀ HTTP 201
+  Response: {
+  "age" : 116,
+  "email" : "test-15d3ac56c714@example.com",
+  "name" : "Zachariah Collier"
+}
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Chelsie Mayer I",
+  "email" : "test-1f98416f3f33@example.com",
+  "age" : 134
+}
+◀ HTTP 201
+  Response: {
+  "age" : 134,
+  "email" : "test-1f98416f3f33@example.com",
+  "name" : "Chelsie Mayer I"
+}
+▶ PUT http://localhost:3000/dev/users/test-1f98416f3f33@example.com
+  Request: {
+  "name" : "Otis Predovic",
+  "email" : "test-78306d654394@example.com",
+  "age" : 151
+}
+◀ HTTP 400
+  Response: {
+  "error" : "Age must be between 1 and 150"
+}

@@ -1,0 +1,17 @@
+▶ POST http://localhost:3000/dev/users
+  Request: {
+  "name" : "Efrain Sporer",
+  "email" : "test-2e20f0a5b861@example.com"
+}
+◀ HTTP 400
+  Response: {
+  "error" : "age is required"
+}
+▶ DELETE http://localhost:3000/dev/users/test-8e9f0e6b7916@example.com
+◀ HTTP 204
+  Response: 
+▶ DELETE http://localhost:3000/dev/users/nonexistent@example.com
+◀ HTTP 404
+  Response: {
+  "error" : "User not found"
+}

@@ -1,0 +1,12 @@
+▶ GET http://localhost:3000/dev/users/test-9e821c97074d@example.com
+◀ HTTP 200
+  Response: {
+  "age" : 98,
+  "email" : "test-9e821c97074d@example.com",
+  "name" : "Dr. Sherie Ortiz"
+}
+▶ GET http://localhost:3000/dev/users/nonexistent@example.com
+◀ HTTP 500
+  Response: {
+  "error" : "Internal server error"
+}
