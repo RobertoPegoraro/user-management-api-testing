@@ -1,0 +1,83 @@
+name: E2E Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  e2e-tests:
+    name: E2E - ${{ matrix.env }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        env: [ dev, prod ]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: gradle
+
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+
+      - name: Start API
+        run: |
+          docker run -d -p 3000:3000 --name api ghcr.io/danielsilva-loanpro/sdet-interview-challenge:latest
+
+          echo "Waiting for API..."
+          for i in $(seq 1 30); do
+            if curl -sf http://localhost:3000/${{ matrix.env }}/users > /dev/null; then
+              echo "API ready after $i attempts"
+              exit 0
+            fi
+            sleep 2
+          done
+
+          echo "API failed to start"
+          docker logs api
+          exit 1
+
+      - name: Run E2E tests
+        run: ./gradlew :api-testing:testPipeline -Denv=${{ matrix.env }}
+
+      - name: Dump API logs
+        if: always()
+        run: docker logs api
+
+      - name: Publish Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v2
+        if: always()
+        with:
+          check_name: Test Results (${{ matrix.env }})
+          files: api-testing/build/test-results/**/*.xml
+          comment_mode: always
+
+      - name: Install Allure CLI
+        if: always()
+        run: npm install -g allure-commandline --no-save
+
+      - name: Generate Allure Report
+        if: always()
+        run: |
+          allure generate api-testing/build/allure-results \
+            --clean \
+            -o api-testing/build/allure-report
+
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: allure-report-${{ matrix.env }}
+          path: api-testing/build/allure-report
+          retention-days: 30
